@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "title": "{TITLE}",
+        "description": "{ABSTRACT}",
+        "creators": {AUTHORS},
+        "keywords": {KEYWORDS},
+        "upload_type": "dataset",
+        "access_right": "open",
+        "license": { "id": "cc-zero"},
+        "publication_date": "2017-03-31"
+    }
+}
