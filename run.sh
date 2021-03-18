@@ -1,9 +1,12 @@
 #!/bin/bash
 
-python ./fill_template.py ./template.txt data.csv
+DATA_FOLDER=./data
+
+python ./fill_template.py $DATA_FOLDER/template.txt $DATA_FOLDER/data.csv
 
 echo Copy the .pdf files to the folder of .json files.
-read -rsp $'Press enter to continue...\n'
+# read -rs $'Press enter to continue...\n'
 
-TOKEN=INSERT_YOUR_ZENODO_TOKEN_HERE
-python ./upload_to_zenodo.py $TOKEN .
+TOKEN=`cat .token2`
+export TOKEN
+python ./upload_to_zenodo.py $TOKEN ./$DATA_FOLDER
