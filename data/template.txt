@@ -8,6 +8,8 @@
         "access_right": "open",
         "communities": [{"identifier": "ccg"}],
         "license": { "id": "cc-zero"},
-        "publication_date": "2017-03-31"
+        "publication_date": "2017-03-31",
+        "language": "eng",
+        "version": "v1.0"
     }
 }
