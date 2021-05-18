@@ -12,10 +12,11 @@ _You don't want to accidentally flood your real Zenodo account with dummy submis
 <a href="https://github.com/darvasd/upload-to-zenodo/blob/master/docs/overview.png" title="Overview"><img src="https://github.com/darvasd/upload-to-zenodo/blob/master/docs/overview.png" width="800" /></a>
 
 1. Get a _Personal access token_ at https://zenodo.org/account/settings/applications/. The `deposit:write` is enough: to be on the safe side, the script does not publish the uploaded papers, the _Publish_ button has to be pushed manually. (Once a document is published on Zenodo, the attached files cannot be modified.)
-1. Paste you personal token into a file called `.token` and place in your working directory
-1. Place subfolders of csv files in the `data` folder
-1. Fill in the `data/data.csv` file with the required metadata for the files
-1. Run `run.sh`
+1. Paste your personal token into a file called `.token` and place in your working directory (or paste into `run.bat` file)
+1. Place `Starter Kit - List of Countries.xlsx` in the root folder
+1. Place `authors.xlsx` in the root folder
+1. Place subfolders of csv files in the `data` folder. Subfolder names should match country names in `Starter Kit - List of Countries.xlsx`
+1. Run `run.sh` (Linux or OSX) or `run.bat` (Windows)
 
 ## Customising the uploads
 
