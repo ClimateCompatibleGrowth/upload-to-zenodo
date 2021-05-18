@@ -5,12 +5,14 @@ import json
 
 columns = ['Name of the Country', 'Author List (draft, to be checked)']
 
-df = pd.read_excel('Starter Kit - List of Countries.xlsx', usecols=columns).dropna()
+df = pd.read_excel('Starter Kit - List of Countries.xlsx', usecols=columns,
+                   engine='openpyxl').dropna()
 df = df.rename(columns={'Name of the Country': 'country',
                         'Author List (draft, to be checked)': 'authors'})
 lookup = df.set_index('country').to_dict()['authors']
 
-data = pd.read_excel('authors.xlsx', usecols=['firstname', 'lastname', 'orcid', 'institution'], na_filter=False)
+data = pd.read_excel('authors.xlsx', engine='openpyxl',
+                     usecols=['firstname', 'lastname', 'orcid', 'institution'], na_filter=False)
 data['lookup'] = data['firstname'] + " " + data['lastname']
 data = data.set_index('lookup')
 
