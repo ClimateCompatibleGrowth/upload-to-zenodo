@@ -15,7 +15,7 @@ Table9_<COUNTRY>.csv: Estimated Fossil Fuel Reserves
 
 A `references.bib` file which contains all the data sources
 A SAND file: "<COUNTRY> Base SAND.xlsm"
-
+A csv file "resid_cap_COUNTRY" which contains the residual capacity data
 
 This data is licensed under a Creative Commons Zero license.
 

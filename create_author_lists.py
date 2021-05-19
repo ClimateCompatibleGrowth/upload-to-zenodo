@@ -2,6 +2,7 @@ import pandas as pd
 import re
 from csv import DictWriter
 import json
+import os
 
 columns = ['Name of the Country', 'Author List (draft, to be checked)']
 
@@ -54,7 +55,7 @@ for country, author_list in lookup.items():
                                 'GNUMathProg', 'GLPK', 'linear programming', "{}".format(countryname)])
     }
     csv_file_contents.append(contents)
-    with open('data.csv', 'w') as csvfile:
+    with open(os.path.join(data, 'data.csv'), 'w') as csvfile:
         write = DictWriter(csvfile, fieldnames=["FILENAME","TITLE","ABSTRACT","AUTHORS","KEYWORDS"])
         write.writeheader()
         write.writerows(csv_file_contents)

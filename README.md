@@ -16,7 +16,8 @@ _You don't want to accidentally flood your real Zenodo account with dummy submis
 1. Place `Starter Kit - List of Countries.xlsx` in the root folder
 1. Place `authors.xlsx` in the root folder
 1. Place subfolders of csv files in the `data` folder. Subfolder names should match country names in `Starter Kit - List of Countries.xlsx`
-1. Run `run.sh` (Linux or OSX) or `run.bat` (Windows)
+1. You may wish to update certain fields in `data/template.txt` such as publication date. This is used as a template for each of the metadata files generated in the next step.
+1. Run `run.sh` (Linux or OSX) or `run.bat` (Windows). This scripts should first create a file `data/data.csv` which contains all of the countries info. Then, individual `<country>.json` Zenodo metadata files are created. Finally, the folders are uploaded to Zenodo.
 
 ## Customising the uploads
 
