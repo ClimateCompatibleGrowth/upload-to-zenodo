@@ -1,7 +1,7 @@
-@SET DATA_FOLDER=./data
+@SET DATA_FOLDER=data
 
 python create_author_lists.py
-python ./fill_template.py $DATA_FOLDER/template.txt $DATA_FOLDER/data.csv
+python fill_template.py %DATA_FOLDER%\template.txt %DATA_FOLDER%\data.csv
 
 @echo Copy any extra files to the folder of .json files.
 @pause
