@@ -55,7 +55,7 @@ for country, author_list in lookup.items():
                                 'GNUMathProg', 'GLPK', 'linear programming', "{}".format(countryname)])
     }
     csv_file_contents.append(contents)
-    with open(os.path.join(data, 'data.csv'), 'w') as csvfile:
-        write = DictWriter(csvfile, fieldnames=["FILENAME","TITLE","ABSTRACT","AUTHORS","KEYWORDS"])
+    with open(os.path.join('data', 'data.csv'), 'w') as csvfile:
+        write = DictWriter(csvfile, fieldnames=["FILENAME","TITLE","ABSTRACT","AUTHORS","KEYWORDS"], lineterminator = "\n")
         write.writeheader()
         write.writerows(csv_file_contents)
