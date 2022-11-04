@@ -12,8 +12,10 @@
         "access_right": "open",
         "language": "eng",
         "version": "v1.0",
-        "prereserve_doi": "true",
         "notes": "{NOTE}",
-        "related_identifiers": [{"relation": "isPartOf", "identifier": "https://climatecompatiblegrowth.com/cop27-policy-briefs/"}]
-    }
+        "prereserve_doi": "false",
+        "related_identifiers": [{"relation": "isPartOf", "identifier": "https://climatecompatiblegrowth.com/cop27-policy-briefs/"}],
+        "doi": "{DOI}"
+    },
+    "id": {ID}
 }
