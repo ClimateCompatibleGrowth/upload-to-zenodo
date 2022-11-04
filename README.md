@@ -26,7 +26,7 @@ _You don't want to accidentally flood your real Zenodo account with dummy submis
    - An example template and some example deposition metadata files can be found in the example folder.
    - The JSON description of any submitted document can be checked by clicking on the JSON link in the Export panel (or by checking the `https://zenodo.org/record/{ID}/export/json` URL.)
 1. Create a CSV file that describes the parts that are different for each submission.
-   - The `{key-name}` strings of the template will be replaced by the values from the colmn having `key-name` as header in the CSV file.
+   - The `{key-name}` strings of the template will be replaced by the values from the column having `key-name` as header in the CSV file.
    - The CSV file should contain a `FILENAME` column, describing the name of the file created by substituting the values from the given row to the template.
 1. Place the CSV datafile and template into the `data` folder.
 1. Execute the script `fill_template.py` to generate the descriptors (deposition metadata) for each submission.
@@ -36,3 +36,20 @@ _You don't want to accidentally flood your real Zenodo account with dummy submis
 1. Execute the script `upload_to_zenodo.py` to upload your submissions.
    - Usage: `upload_to_zenodo.py <token> <directory>`, where `<token>` is your personal access token, and `<directory>` is the directory that contains the JSON and PDF files to be uploaded.
 1. Go to the [Upload page](https://zenodo.org/deposit), check and publish your submissions.
+
+# Policy Briefs
+
+1. Create a custom policy brief template
+
+## List of policy briefs received
+
+2. Use the Excel sheet to list policy briefs, authors and other metadata.
+3. Run `create_author_lists.py` to generate the `data.csv` file.
+3. Run `fill_template.py` to fill out the templates to create the JSON metadata files for upload to Zenodo
+4. Run `upload_to_zenodo.py` to upload the pdf of the policy briefs to Zenodo (updates JSON with DOI number)
+5. Run the `get_doi.py` script to add DOIs to policy briefs in Excel
+
+## New policy briefs received with updated metadata
+
+1. Update the JSON templates using the DOIs listed in the Excel file
+4. Upload the pdf of the policy briefs to Zenodo
