@@ -1,4 +1,6 @@
 run_private.*
 .token*
 data/*.json
+data/*.pdf
 data/data.csv
+*.xlsx
