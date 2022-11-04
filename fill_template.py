@@ -1,3 +1,11 @@
+"""
+Generate the descriptors (deposition metadata) for each submission.
+
+Usage: `python fill_template.py <template_filename> <data_filename>`,
+where `<template_filename>` is the name (path) of the template file
+and `<data_filename>` is the name (path) of the CSV data file.
+
+"""
 import sys
 import csv
 import os.path
@@ -23,8 +31,8 @@ def fill_template(template_filename, data_filename):
                     filled_template = filled_template.replace("{%s}" % column, row[column])
                     print(("    {%s} = %s" % (column, row[column])).encode().decode('cp850'))
 
-            # Write to output file
 
+            # Write to output file
             filepath = os.path.join(os.path.dirname(data_filename), output_filename)
             with open(filepath, "w", encoding='utf-8') as output_file:
                 output_file.write(filled_template)
@@ -32,7 +40,7 @@ def fill_template(template_filename, data_filename):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: fill_template.py <template_filename> <data_filename>")
+        print("Usage: python fill_template.py <template_filename> <data_filename>")
         exit()
 
     template_filename = sys.argv[1] # e.g. "template.json"
